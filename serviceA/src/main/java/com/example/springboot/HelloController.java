@@ -28,6 +28,16 @@ public class HelloController {
 		return "Greetings from Spring Boot Service A!";
 	}
 
+	@GetMapping("/users")
+	public String users() {
+		return "Greetings User!";
+	}
+
+	@GetMapping("/admins")
+	public String admins() {
+		return "Greetings Admin!";
+	}
+
 	@GetMapping("/hitB")
 	public String hitB() {
 		RestTemplate restTemplate = new RestTemplate();
