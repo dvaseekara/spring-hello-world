@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -20,21 +21,26 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 public class HelloController {
+	Logger logger = LoggerFactory.getLogger(LoggingController.class);
+
 	@Value("${URL}")
 	String serviceburl;
 
 	@GetMapping("/")
 	public String index() {
+		logger.info("Greetings from Spring Boot Service A!");
 		return "Greetings from Spring Boot Service A!";
 	}
 
 	@GetMapping("/users")
 	public String users() {
+		logger.info("Greetings User!");
 		return "Greetings User!";
 	}
 
 	@GetMapping("/admins")
 	public String admins() {
+		logger.info("Greetings Admin!");
 		return "Greetings Admin!";
 	}
 
