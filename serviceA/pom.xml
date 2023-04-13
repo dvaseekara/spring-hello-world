@@ -20,26 +20,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<!-- tag::actuator[] -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<!-- end::actuator[] -->
-
-		<!-- tag::tests[] -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- end::tests[] -->
-
-		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-spring-boot-starter</artifactId>
 		</dependency>
@@ -48,19 +28,15 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.keycloak.bom</groupId>
-				<artifactId>keycloak-adapter-bom</artifactId>
-				<version>21.0.2</version>
-				<type>pom</type>
-				<scope>import</scope>
+			<groupId>org.keycloak.bom</groupId>
+			<artifactId>keycloak-adapter-bom</artifactId>
+			<version>15.1.0</version>
+			<type>pom</type>
+			<scope>import</scope>
 			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-log4j2</artifactId>				
-			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
+
 
 	<build>
 		<plugins>
