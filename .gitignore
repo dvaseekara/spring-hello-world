@@ -1,3 +1,9 @@
 serviceA/target/*
 serviceB/target/*
 .vscode
+serviceA/target/
+serviceB/targer/
+serviceA/target
+serviceB/target
+./serviceA/target
+./serviceB/target
